@@ -1,9 +1,10 @@
 import React from 'react';
+import ChatView from './ChatView'
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <ChatView></ChatView>
     </div>
   );
 }
