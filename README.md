@@ -2,6 +2,8 @@
 
 While following the tutorial on the getStream Blog [link](https://getstream.io/blog/securing-a-chat-app-with-react-and-auth0/#add-chat-functionality-with-stream:~:text=section.-,Add%20chat%20functionality%20with%20Stream), the `channel.watch()` appears to be causing an infinite loop of failed calls to the getStream API.
 
+See `ChatView.js`, line 47 in this repo. Line 55 in the blog link.
+
 To reproduce
 ```
 git clone git@github.com:hochoy/debug-getstream.git
