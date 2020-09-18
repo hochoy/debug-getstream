@@ -1,3 +1,45 @@
+# Issue: Infinite loop triggered by channel.watch()
+
+While following the tutorial on the getStream Blog [link](https://getstream.io/blog/securing-a-chat-app-with-react-and-auth0/#add-chat-functionality-with-stream:~:text=section.-,Add%20chat%20functionality%20with%20Stream), the `channel.watch()` appears to be causing an infinite loop of failed calls to the getStream API.
+
+To reproduce
+```
+git clone git@github.com:hochoy/debug-getstream.git
+npm install
+mkdir src/test_creds
+touch src/test/creds/getstream.json
+
+// add the following to the json
+// {
+//   "REACT_APP_GS_TOKEN": "<TOKEN>",
+//   "REACT_APP_GS_UID": "<USERID",
+//   "REACT_APP_GS_KEY": "<APIKEY>"
+// }
+
+npm start
+```
+
+</br>
+You should expect to see:
+</br>
+</br>
+The browser calling the getStream API infinitely and returning a connection error message.
+</br>
+</br>
+
+!["network_blast"](network_blast.png)
+</br>
+</br>
+Lots of time-outs
+</br>
+</br>
+
+!["console_log"](console_log.png)
+
+
+
+# BOILERPLATE CRA
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
