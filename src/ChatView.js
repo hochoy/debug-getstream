@@ -100,6 +100,7 @@ function ChatView() {
     return (
       <Chat client={chatClient} theme="team light">
         <ChannelList
+          filters={}
           options={{
             subscribe: true,
             state: true
